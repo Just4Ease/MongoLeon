@@ -1,6 +1,6 @@
 {
   "name": "mongoleon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MongoDB Leon, a database command center from the browser. Web alternative to Studio3T and MondoDB Compass",
   "main": "index.js",
   "scripts": {
