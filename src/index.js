@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const bodyParser = require('body-parser');
 
 
 /**
@@ -22,7 +23,15 @@ module.exports.init = ({ DBName, URL } = {}) => {
 		});
 	}
 
+	// if (/mongodb:/igm.test(URL)) {
+	// 	URL = URL.split('mongodb://')[1];
+	// }
+
 	const controller = module.require('./controllers');
+	app.use(bodyParser.json()); // apply bodyParser.json() to all json request
+	app.use(bodyParser.urlencoded({
+		extended: true
+	}));
 	app.use('/mongo-leon', controller(router, {
 		DBName,
 		URL

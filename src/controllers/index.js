@@ -12,7 +12,7 @@ module.exports = (router, connection) => {
 				response = await DBA.doQuery(connection, req.body);
 				break;
 			case 'AGGREGATION':
-				response = await DBA.doAggregation(req.body);
+				response = await DBA.doAggregation(connection, req.body);
 				break;
 			default:
 				return res.status(400)
@@ -30,7 +30,7 @@ module.exports = (router, connection) => {
 		.json(response);
 	});
 	router.get('/list', async (req, res) => {
-		const response = await DBA.listCollections();
+		const response = await DBA.listCollections(connection);
 
 		const statusCode = StatusCodeHandler(response.error);
 

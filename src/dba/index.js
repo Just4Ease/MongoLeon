@@ -1,6 +1,4 @@
 const { ErrorTypes, SanitizeParams } = require('../utils');
-
-const _ = require('lodash');
 const { MongoClient } = require('mongodb');
 
 
@@ -55,6 +53,7 @@ const aggregate = (db, payload) => new Promise((resolve, reject) => {
 module.exports = {
 	async doAggregation(connection, payload) {
 		try {
+			console.log(payload, ' payload.');
 			const { DBName, URL } = connection;
 			const client = await MongoClient.connect(URL);
 			const db = client.db(DBName);

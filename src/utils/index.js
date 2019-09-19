@@ -1,3 +1,4 @@
+const _ = require('lodash');
 /**
  * Returns Status Code Numbers based on the Error Construct from @ErrorTypes
  * @param error
@@ -54,11 +55,21 @@ class ErrorTrap {
 const SanitizeParams = (__param__) => {
 	let p = String(__param__);
 	String(__param__)
-	.replace(/\s/igm, '') // replace all white spaces with nothing
-	.replace(/[']/igm, '"') // replace all ' with "
-	.replace(/[{}]/igm, '') // replace all matching braces {} with nothing.
-	.split(/[,:]/igm) // separate all texts that matches the separators ,;
-	.filter(key => !key.includes('"')) // filter for those without the double strings.
+	// replace all white spaces with nothing
+	.replace(/\s/igm, '')
+
+	// replace all ' with "
+	.replace(/[']/igm, '"')
+
+	// replace all matching braces {} with nothing.
+	.replace(/[{}]/igm, '')
+
+	// separate all texts that matches the separators ,;
+	.split(/[,:]/igm)
+
+	// filter for those without the double strings.
+	.filter(key => !key.includes('"'))
+
 	.forEach((key) => {
 		if (!_.isFinite(Number(key))) {
 			// replace them with the double strings if it's not a number or a string.

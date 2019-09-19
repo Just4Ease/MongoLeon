@@ -1,10 +1,11 @@
 {
   "name": "mongoleon",
-  "version": "1.0.1",
-  "description": "MongoDB Leon, a database command center from the browser. Web alternative to Studio3T and MondoDB Compass",
+  "version": "1.0.2",
+  "description": "MongoDB Leon, a database command center from the browser. Web alternative to Studio3T and MongoDB Compass",
   "main": "index.js",
   "scripts": {
-    "test": "ava"
+    "test": "ava",
+    "start": "node example/index.js"
   },
   "repository": {
     "type": "git",
@@ -12,16 +13,17 @@
   },
   "keywords": [
     "MongoDB",
-    "StudioT3",
+    "Studio3T",
     "Compass"
   ],
-  "author": "Justice Nefe <hi@justicenefe.com>",
+  "author": "Justice Nefe <justicenefe@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Just4Ease/MongoLeon/issues"
   },
   "homepage": "https://github.com/Just4Ease/MongoLeon#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "lodash": "^4.17.15",
     "mongodb": "^3.3.2"
