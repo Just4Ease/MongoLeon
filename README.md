@@ -27,9 +27,9 @@ app.listen(8080);
 
 Visit `http://localhost:8080/mongo-leon` 
 
+Aggregation UI
+ ![MongoLeon Aggregation](example/assets/result.png)
+ 
 Query UI
  ![MongoLeon Aggregation](example/assets/query.png)
-
-Aggregation UI
- ![MongoLeon Aggregation](example/assets/aggregation.png)
 
