@@ -1,8 +1,8 @@
-#MongoLeon 
+# MongoLeon 
 MongoDB Leon, a database command center from the browser. Web alternative to Studio3T and MongoDB Compass
 
-###Usage:
-#####// ESM or Babel or TS
+### Usage:
+##### // ESM or Babel or TS
 >`import MongoLeon from 'mongoleon'`
 
 
